@@ -55,12 +55,83 @@ h1,h2,h3,h4,h5,h6{
   @apply bs-dark-green-bg text-white  px-6 py-2 rounded-full inline-block
 }
 
-ul.slick-dots {
+/* hero slide dots */
+
+.hero-slide ul.slick-dots {
   position: absolute;
   right: 2%;
   top: 50%;
-  background: #333;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
+  margin-top: -32.5px
 }
+
+.hero-slide ul.slick-dots button {
+  text-indent: -9999px;
+  background-color: #d1ddd2;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-slide ul.slick-dots li {
+  border-width: 1px;
+  height: 15px;
+  width: 15px;
+  display: flex;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.hero-slide ul.slick-dots li.slick-active {
+  border-color: #FF5C00;
+}
+
+.hero-slide ul.slick-dots li.slick-active button {
+  @apply bs-dark-orange-bg;
+}
+
+.category-carousel .slick-list {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.category-carousel .slick-slide > div{
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.category-carousel > svg {
+  width: 30px;
+  height: 30px;
+  background: gray;
+  border-radius: 50%;
+  position: absolute;
+  right: 39px;
+  top: -103px;
+  cursor: pointer;
+}
+
+.category-carousel > svg:last-child {
+  right: 0;
+}
+.promo-bg-1{
+  background-image: url('../img/promobg-1.png');
+}
+.promo-bg-2{
+  background-image: url('../img/promobg-2.png');
+}
+.promo-button
+{
+  color: #FF5C00;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+.product-image-hover{
+  display: none;
+}
+.single-bs-product:hover .product-image-hover{
+
+  display: flex;
+}
+

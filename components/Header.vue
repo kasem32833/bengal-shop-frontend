@@ -22,18 +22,33 @@
       </div>
 
 
-      <div class="flex items-center">
-        <div class="w-96">
-          <div class="flex items-center bs-dark-green-bg rounded-full px-4 py-2 cursor-pointer">
+      <div v-click-outside="menuClose"  class="flex items-center">
+        <div class="w-96 relative">
+          <div @click.prevent="menuClick" class="flex items-center bs-dark-green-bg rounded-full px-4 py-2 cursor-pointer ">
             <div class="min-w-max">
               <img src="~/assets/img/menu-right.png" alt="">
             </div>
-            <div class="w-full text-center px-6 text-white">All categories</div>
+            <div class="w-full text-center px-6 text-white relative z-20 text-lg">All categories</div>
             <div class="min-w-max">
               <img src="~/assets/img/chevron-down.png" alt="">
             </div>
           </div>
+          <!-- Categorie slide menu -->
+          <div v-bind:class="allCategoryMenu ? 'flex visible'  : 'hidden invisible' " class="   absolute bs-dark-green-bg z-10 w-full -mt-4  flex-col space-y-3 rounded-b-2xl">
+            <ul class="py-4 text-center">
+              <li><nuxt-link to="" class="py-2 px-4 block text-white hover:text-black">Fruites</nuxt-link></li>
+              <li><nuxt-link to="" class="py-2 px-4 block text-white hover:text-black">Vegetables</nuxt-link></li>
+              <li><nuxt-link to="" class="py-2 px-4 block text-white hover:text-black">Groceries</nuxt-link></li>
+              <li><nuxt-link to="" class="py-2 px-4 block text-white hover:text-black">Fruites</nuxt-link></li>
+              <li><nuxt-link to="" class="py-2 px-4 block text-white hover:text-black">Fruites</nuxt-link></li>
+              <li><nuxt-link to="" class="py-2 px-4 block text-white hover:text-black">Fruites</nuxt-link></li>
+              <li><nuxt-link to="" class="py-2 px-4 block text-white hover:text-black">Fruites</nuxt-link></li>
+              <li><nuxt-link to="" class="py-2 px-4 block text-white hover:text-black">Fruites</nuxt-link></li>
+              <li><nuxt-link to="" class="py-2 px-4 block text-white hover:text-black">Fruites</nuxt-link></li>
+            </ul>
+          </div>
         </div>
+
         <div class="w-full">
           <ul>
             <li class="flex justify-center">
@@ -55,9 +70,25 @@
 </template>
 
 <script>
-
 export default {
-  name: "Header"
+  name: "Header",
+
+  data(){
+    return{
+      allCategoryMenu: false,
+    }
+  },
+  methods:{
+    menuClick (){
+      this.allCategoryMenu = !this.allCategoryMenu;
+    },
+    menuClose(){
+
+
+      this.allCategoryMenu = false;
+    }
+  }
+
 }
 </script>
 
