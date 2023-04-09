@@ -54,7 +54,7 @@
             <li class="flex justify-center">
               <nuxt-link to="#" class="p-4">Home</nuxt-link>
               <nuxt-link to="#" class="p-4">Shop</nuxt-link>
-              <nuxt-link to="#" class="p-4">Categories</nuxt-link>
+              <nuxt-link to="/categories" class="p-4">Categories</nuxt-link>
               <nuxt-link to="#" class="p-4">Offers</nuxt-link>
               <nuxt-link to="#" class="p-4">Contact</nuxt-link>
               <nuxt-link to="#" class="p-4">FAQs</nuxt-link>
